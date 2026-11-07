@@ -1,0 +1,12 @@
+# Entorno verificado: Python 3.12 (venv del curso). Versiones instaladas en el entorno existente.
+pandas==3.0.5
+numpy==2.5.2
+pyarrow==25.0.1
+sqlglot==30.29.0
+openpyxl==3.1.5
+matplotlib==3.11.2
+seaborn==0.13.2
+
+# Notebooks (ya presentes en el venv) y ejecución reproducible de notebooks
+ipykernel>=7.0
+nbformat>=5.10

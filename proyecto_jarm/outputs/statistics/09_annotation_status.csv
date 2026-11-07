@@ -1,0 +1,4 @@
+source,n_annotations,n_automatic,n_manual_review,n_unresolved,n_validated,questions_total,questions_manual_review,queries_not_parsed,queries_partially_resolved,queries_unresolved,unresolved_column_refs,unresolved_table_refs,literal_fallbacks
+BIRD,963578,941694,21884,0,0,10962,349,0,315,34,956,199,2
+CATASTRO,164240,164240,0,0,0,80,0,0,0,0,0,0,0
+SPIDER,299736,299658,78,0,0,8034,1,0,1,0,2,1,2215

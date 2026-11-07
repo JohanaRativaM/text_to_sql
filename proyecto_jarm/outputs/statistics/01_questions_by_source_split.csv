@@ -1,0 +1,7 @@
+source,split,source_split,n_questions,n_dbs,n_duplicates
+BIRD,test,train,1432,14,0
+BIRD,train,train,7996,55,10
+BIRD,validation,dev,1534,11,2
+CATASTRO,test_transfer,catastro,80,1,0
+SPIDER,train,train,7000,140,18
+SPIDER,validation,dev,1034,20,0

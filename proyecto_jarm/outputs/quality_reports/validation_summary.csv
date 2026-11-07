@@ -1,0 +1,121 @@
+category,check,source,count,severity,note
+integridad,preguntas_vacias,BIRD,0,ok,
+integridad,preguntas_sin_sql,BIRD,0,ok,
+integridad,sql_sin_esquema_asociado,BIRD,0,ok,
+integridad,example_id_duplicados,BIRD,0,ok,
+integridad,registros_duplicados_pregunta_sql,BIRD,12,warning,"marcados, no eliminados"
+integridad,nulos_en_db_id,BIRD,0,ok,
+integridad,nulos_en_split,BIRD,0,ok,
+integridad,nulos_en_source_split,BIRD,0,ok,
+integridad,nulos_en_dialect,BIRD,0,ok,
+integridad,nulos_en_schema_id,BIRD,0,ok,
+integridad,evidence_nula,BIRD,0,ok,BIRD debe conservar evidence (cadena vacía permitida)
+integridad,evidence_vacia,BIRD,793,info,conservadas por diseño
+integridad,preguntas_vacias,CATASTRO,0,ok,
+integridad,preguntas_sin_sql,CATASTRO,0,ok,
+integridad,sql_sin_esquema_asociado,CATASTRO,0,ok,
+integridad,example_id_duplicados,CATASTRO,0,ok,
+integridad,registros_duplicados_pregunta_sql,CATASTRO,0,ok,"marcados, no eliminados"
+integridad,nulos_en_db_id,CATASTRO,0,ok,
+integridad,nulos_en_split,CATASTRO,0,ok,
+integridad,nulos_en_source_split,CATASTRO,0,ok,
+integridad,nulos_en_dialect,CATASTRO,0,ok,
+integridad,nulos_en_schema_id,CATASTRO,0,ok,
+integridad,preguntas_vacias,SPIDER,0,ok,
+integridad,preguntas_sin_sql,SPIDER,0,ok,
+integridad,sql_sin_esquema_asociado,SPIDER,0,ok,
+integridad,example_id_duplicados,SPIDER,0,ok,
+integridad,registros_duplicados_pregunta_sql,SPIDER,18,warning,"marcados, no eliminados"
+integridad,nulos_en_db_id,SPIDER,0,ok,
+integridad,nulos_en_split,SPIDER,0,ok,
+integridad,nulos_en_source_split,SPIDER,0,ok,
+integridad,nulos_en_dialect,SPIDER,0,ok,
+integridad,nulos_en_schema_id,SPIDER,0,ok,
+parser,consultas_no_parseadas,BIRD,0,ok,
+parser,consultas_resueltas,BIRD,10613,info,
+parser,consultas_parcialmente_resueltas,BIRD,315,warning,
+parser,consultas_sin_resolver,BIRD,34,warning,
+esquema,tablas_usadas_inexistentes,BIRD,199,warning,
+esquema,columnas_usadas_inexistentes,BIRD,531,warning,
+esquema,alias_sin_resolver,BIRD,425,warning,
+esquema,referencias_ambiguas,BIRD,0,ok,
+esquema,alias_duplicados_en_sql,BIRD,1,warning,
+parser,literales_sqlite_entre_comillas_dobles,BIRD,2,info,"interpretados como literal (semántica SQLite), no como error"
+parser,consultas_no_parseadas,CATASTRO,0,ok,
+parser,consultas_resueltas,CATASTRO,80,info,
+parser,consultas_parcialmente_resueltas,CATASTRO,0,ok,
+parser,consultas_sin_resolver,CATASTRO,0,ok,
+esquema,tablas_usadas_inexistentes,CATASTRO,0,ok,
+esquema,columnas_usadas_inexistentes,CATASTRO,0,ok,
+esquema,alias_sin_resolver,CATASTRO,0,ok,
+esquema,referencias_ambiguas,CATASTRO,0,ok,
+esquema,alias_duplicados_en_sql,CATASTRO,0,ok,
+parser,literales_sqlite_entre_comillas_dobles,CATASTRO,0,ok,"interpretados como literal (semántica SQLite), no como error"
+parser,consultas_no_parseadas,SPIDER,0,ok,
+parser,consultas_resueltas,SPIDER,8033,info,
+parser,consultas_parcialmente_resueltas,SPIDER,1,warning,
+parser,consultas_sin_resolver,SPIDER,0,ok,
+esquema,tablas_usadas_inexistentes,SPIDER,1,warning,
+esquema,columnas_usadas_inexistentes,SPIDER,1,warning,
+esquema,alias_sin_resolver,SPIDER,1,warning,
+esquema,referencias_ambiguas,SPIDER,0,ok,
+esquema,alias_duplicados_en_sql,SPIDER,0,ok,
+parser,literales_sqlite_entre_comillas_dobles,SPIDER,2215,info,"interpretados como literal (semántica SQLite), no como error"
+esquema,fk_con_referencias_invalidas,BIRD,0,ok,
+esquema,esquemas_con_incidencias,BIRD,0,ok,
+esquema,esquemas_sin_fk,BIRD,13,info,
+esquema,fk_con_referencias_invalidas,CATASTRO,0,ok,
+esquema,esquemas_con_incidencias,CATASTRO,0,ok,
+esquema,esquemas_sin_fk,CATASTRO,0,ok,
+esquema,fk_con_referencias_invalidas,SPIDER,0,ok,
+esquema,esquemas_con_incidencias,SPIDER,0,ok,
+esquema,esquemas_sin_fk,SPIDER,2,info,
+etiquetas,vectores_roles_dimension_distinta_7,SPIDER,0,ok,
+etiquetas,vector_roles_incoherente_con_columnas,SPIDER,0,ok,
+etiquetas,irrelevantes_con_roles,SPIDER,0,ok,
+etiquetas,relevantes_sin_roles,SPIDER,0,ok,columnas usadas fuera de las 7 cláusulas (p.ej. LIMIT) o tablas sin FROM
+etiquetas,elementos_duplicados_por_pregunta,SPIDER,0,ok,
+etiquetas,elementos_usados_con_relevancia_0,SPIDER,0,ok,
+etiquetas,preguntas_con_candidatos_incompletos,SPIDER,0,ok,
+etiquetas,roles_inconsistentes_con_clausulas_sql,SPIDER,0,ok,
+etiquetas,anotaciones_automatic,SPIDER,299658,info,
+etiquetas,anotaciones_manual_review,SPIDER,78,info,
+etiquetas,preguntas_pendientes_revision_manual,SPIDER,1,warning,
+etiquetas,vectores_roles_dimension_distinta_7,BIRD,0,ok,
+etiquetas,vector_roles_incoherente_con_columnas,BIRD,0,ok,
+etiquetas,irrelevantes_con_roles,BIRD,0,ok,
+etiquetas,relevantes_sin_roles,BIRD,0,ok,columnas usadas fuera de las 7 cláusulas (p.ej. LIMIT) o tablas sin FROM
+etiquetas,elementos_duplicados_por_pregunta,BIRD,0,ok,
+etiquetas,elementos_usados_con_relevancia_0,BIRD,0,ok,
+etiquetas,preguntas_con_candidatos_incompletos,BIRD,0,ok,
+etiquetas,roles_inconsistentes_con_clausulas_sql,BIRD,0,ok,
+etiquetas,anotaciones_automatic,BIRD,941694,info,
+etiquetas,anotaciones_manual_review,BIRD,21884,info,
+etiquetas,preguntas_pendientes_revision_manual,BIRD,349,warning,
+etiquetas,vectores_roles_dimension_distinta_7,CATASTRO,0,ok,
+etiquetas,vector_roles_incoherente_con_columnas,CATASTRO,0,ok,
+etiquetas,irrelevantes_con_roles,CATASTRO,0,ok,
+etiquetas,relevantes_sin_roles,CATASTRO,0,ok,columnas usadas fuera de las 7 cláusulas (p.ej. LIMIT) o tablas sin FROM
+etiquetas,elementos_duplicados_por_pregunta,CATASTRO,0,ok,
+etiquetas,elementos_usados_con_relevancia_0,CATASTRO,0,ok,
+etiquetas,preguntas_con_candidatos_incompletos,CATASTRO,0,ok,
+etiquetas,roles_inconsistentes_con_clausulas_sql,CATASTRO,0,ok,
+etiquetas,anotaciones_automatic,CATASTRO,164240,info,
+etiquetas,preguntas_pendientes_revision_manual,CATASTRO,0,ok,
+particiones,db_id_compartidos_test_vs_train,BIRD,0,ok,
+particiones,db_id_compartidos_test_vs_validation,BIRD,0,ok,
+particiones,db_id_compartidos_train_vs_validation,BIRD,0,ok,
+particiones,db_id_compartidos_train_vs_validation,SPIDER,0,ok,
+particiones,catastro_fuera_de_test_transfer,CATASTRO,0,ok,
+particiones,tamano_esperado_train,SPIDER,0,ok,"esperado=7000, encontrado=7000"
+particiones,tamano_esperado_validation,SPIDER,0,ok,"esperado=1034, encontrado=1034"
+particiones,tamano_esperado_train,BIRD,0,ok,"esperado=7996, encontrado=7996"
+particiones,tamano_esperado_validation,BIRD,0,ok,"esperado=1534, encontrado=1534"
+particiones,tamano_esperado_test,BIRD,0,ok,"esperado=1432, encontrado=1432"
+particiones,tamano_esperado_test_transfer,CATASTRO,0,ok,"esperado=80, encontrado=80"
+particiones,catastro_en_relevance_train,SCHEMA_LINKING,0,ok,total_lineas=1002292
+particiones,catastro_en_relevance_validation,SCHEMA_LINKING,0,ok,total_lineas=157061
+particiones,catastro_en_relevance_test,SCHEMA_LINKING,0,ok,total_lineas=81999
+particiones,catastro_en_roles_train,SCHEMA_LINKING,0,ok,total_lineas=81949
+particiones,catastro_en_roles_validation,SCHEMA_LINKING,0,ok,total_lineas=14282
+particiones,catastro_en_roles_test,SCHEMA_LINKING,0,ok,total_lineas=9416

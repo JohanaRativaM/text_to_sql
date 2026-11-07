@@ -1,0 +1,4 @@
+source,n_questions,tables_mean,columns_mean,total_mean,total_median,total_min,total_max
+BIRD,10962,11.11,76.79,87.9,60.0,9,520
+CATASTRO,80,232.0,1821.0,2053.0,2053.0,2053,2053
+SPIDER,8034,5.84,31.47,37.31,27.0,9,378

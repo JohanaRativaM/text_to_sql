@@ -1,0 +1,13 @@
+# Datos originales (pesados) y artefactos generados reproducibles
+raw/spider_data.zip
+raw/spider_data/database/
+raw/spider_data/test_database/
+raw/catastro_data/bd_catastro_test
+data/schema_linking/*.jsonl
+data/annotations/*.parquet
+outputs/logs/
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

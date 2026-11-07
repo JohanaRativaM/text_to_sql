@@ -1,0 +1,33 @@
+example_id,source,db_id,split,duplicate_group_id,question,sql_gold
+BIRD-train-07820,BIRD,world,train,09e79b92ab,List any five countries which use English as an official language.,SELECT T1.Name FROM Country AS T1 INNER JOIN CountryLanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language = 'English' AND T2.IsOfficial = 'T' LIMIT 5
+BIRD-train-07830,BIRD,world,train,09e79b92ab,List any five countries which use English as an official language.,SELECT T1.Name FROM Country AS T1 INNER JOIN CountryLanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language = 'English' AND T2.IsOfficial = 'T' LIMIT 5
+BIRD-train-02700,BIRD,regional_sales,train,20713597c0,How many sales teams are there in the Midwest?,SELECT SUM(CASE WHEN Region = 'Midwest' THEN 1 ELSE 0 END) FROM `Sales Team`
+BIRD-train-02716,BIRD,regional_sales,train,20713597c0,How many sales teams are there in the Midwest?,SELECT SUM(CASE WHEN Region = 'Midwest' THEN 1 ELSE 0 END) FROM `Sales Team`
+BIRD-dev-00863,BIRD,formula_1,validation,5ca629820a,Show me the season page of year when the race No. 901 took place.,SELECT T2.url FROM races AS T1 INNER JOIN seasons AS T2 ON T2.year = T1.year WHERE T1.raceId = 901
+BIRD-dev-00875,BIRD,formula_1,validation,5ca629820a,Show me the season page of year when the race No. 901 took place.,SELECT T2.url FROM races AS T1 INNER JOIN seasons AS T2 ON T2.year = T1.year WHERE T1.raceId = 901
+BIRD-train-04480,BIRD,student_loan,train,865396e442,How many students enlisted in the navy?,SELECT COUNT(name) FROM enlist WHERE organ = 'navy'
+BIRD-train-04555,BIRD,student_loan,train,865396e442,How many students enlisted in the Navy?,SELECT COUNT(name) FROM enlist WHERE organ = 'navy'
+BIRD-train-07831,BIRD,world,train,b6c0fcea56,"Among the languages used in Baltic Countries, provide the languages which are used by over 80%.
+
+",SELECT T2.Language FROM Country AS T1 INNER JOIN CountryLanguage AS T2 ON T1.Code = T2.CountryCode WHERE T1.Region = 'Baltic Countries' AND T2.Percentage > 80
+BIRD-train-07832,BIRD,world,train,b6c0fcea56,"Among the languages used in Baltic Countries, provide the languages which are used by over 80%.",SELECT T2.Language FROM Country AS T1 INNER JOIN CountryLanguage AS T2 ON T1.Code = T2.CountryCode WHERE T1.Region = 'Baltic Countries' AND T2.Percentage > 80
+BIRD-train-09116,BIRD,movie_3,train,c01ce6ec25,How many films are in English?,SELECT COUNT(T1.film_id) FROM film AS T1 INNER JOIN language AS T2 ON T1.language_id = T2.language_id WHERE T2.name = 'English'
+BIRD-train-09161,BIRD,movie_3,train,c01ce6ec25,How many films are in English?,SELECT COUNT(T1.film_id) FROM film AS T1 INNER JOIN language AS T2 ON T1.language_id = T2.language_id WHERE T2.name = 'English'
+SPIDER-train-03413,SPIDER,hr_1,train,124d9eb030,Display all the information about the department Marketing.,SELECT * FROM  departments WHERE department_name  =  'Marketing'
+SPIDER-train-03483,SPIDER,hr_1,train,124d9eb030,display all the information about the department Marketing.,SELECT * FROM  departments WHERE department_name  =  'Marketing'
+SPIDER-train-03414,SPIDER,hr_1,train,36c6079d71,What is all the information about the Marketing department?,SELECT * FROM  departments WHERE department_name  =  'Marketing'
+SPIDER-train-03484,SPIDER,hr_1,train,36c6079d71,What is all the information about the Marketing department?,SELECT * FROM  departments WHERE department_name  =  'Marketing'
+SPIDER-train-02438,SPIDER,movie_1,train,4458628909,How many movies were made before 2000?,SELECT count(*) FROM Movie WHERE YEAR  <  2000
+SPIDER-train-02439,SPIDER,movie_1,train,4458628909,How many movies were made before 2000?,SELECT count(*) FROM Movie WHERE YEAR  <  2000
+SPIDER-train-01348,SPIDER,college_2,train,56ee4b2ffd,Find the name of the courses that do not have any prerequisite?,SELECT title FROM course WHERE course_id NOT IN (SELECT course_id FROM prereq)
+SPIDER-train-01420,SPIDER,college_2,train,56ee4b2ffd,Find the name of the courses that do not have any prerequisite?,SELECT title FROM course WHERE course_id NOT IN (SELECT course_id FROM prereq)
+SPIDER-train-01698,SPIDER,epinions_1,train,8dcfd7dfcc,Find the names of users who did not leave any review.,SELECT name FROM useracct WHERE u_id NOT IN (SELECT u_id FROM review)
+SPIDER-train-01716,SPIDER,epinions_1,train,8dcfd7dfcc,Find the names of users who did not leave any review.,SELECT name FROM useracct WHERE u_id NOT IN (SELECT u_id FROM review)
+SPIDER-train-02211,SPIDER,formula_1,train,c815043391,What is the id and last name of the driver who participated in the most races after 2010?,"SELECT T1.driverid ,  T1.surname FROM drivers AS T1 JOIN results AS T2 ON T1.driverid  =  T2.driverid JOIN races AS T3 ON T2.raceid = T3.raceid WHERE T3.year > 2010 GROUP BY T1.driverid ORDER BY count(*) DESC LIMIT 1"
+SPIDER-train-02212,SPIDER,formula_1,train,c815043391,What is the id and last name of the driver who participated in the most races after 2010?,"SELECT T1.driverid ,  T1.surname FROM drivers AS T1 JOIN results AS T2 ON T1.driverid  =  T2.driverid JOIN races AS T3 ON T2.raceid = T3.raceid WHERE T3.year > 2010 GROUP BY T1.driverid ORDER BY count(*) DESC LIMIT 1"
+SPIDER-train-03459,SPIDER,hr_1,train,c8fdecfe9f,display the ID for those employees who did two or more jobs in the past.,SELECT employee_id FROM job_history GROUP BY employee_id HAVING COUNT(*)  >= 2
+SPIDER-train-03485,SPIDER,hr_1,train,c8fdecfe9f,display the ID for those employees who did two or more jobs in the past.,SELECT employee_id FROM job_history GROUP BY employee_id HAVING COUNT(*)  >= 2
+SPIDER-train-02340,SPIDER,csu_1,train,e2d700727f,Find the count of universities whose campus fee is greater than the average campus fee.,SELECT count(*) FROM csu_fees WHERE campusfee  >  (SELECT avg(campusfee) FROM csu_fees)
+SPIDER-train-02342,SPIDER,csu_1,train,e2d700727f,Find the count of universities whose campus fee is greater than the average campus fee.,SELECT count(*) FROM csu_fees WHERE campusfee  >  (SELECT avg(campusfee) FROM csu_fees)
+SPIDER-train-04398,SPIDER,network_2,train,ee8b6fbd87,How many friends does Dan have?,SELECT count(T2.friend) FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T1.name  =  'Dan'
+SPIDER-train-04399,SPIDER,network_2,train,ee8b6fbd87,How many friends does Dan have?,SELECT count(T2.friend) FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T1.name  =  'Dan'

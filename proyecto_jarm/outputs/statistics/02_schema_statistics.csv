@@ -1,0 +1,4 @@
+source,n_schemas,n_schemas_used,tables_mean,tables_median,tables_min,tables_max,columns_mean,columns_median,columns_min,columns_max,fk_mean
+BIRD,80,80,7.46,5.0,2,65,54.21,38.5,6,455,6.58
+CATASTRO,1,1,232.0,232.0,232,232,1821.0,1821.0,1821,1821,319.0
+SPIDER,166,160,5.28,4.0,2,26,27.13,19.5,6,352,4.79

@@ -1,0 +1,7 @@
+source,split,n_examples,n_dbs
+BIRD,test,1432,14
+BIRD,train,7996,55
+BIRD,validation,1534,11
+CATASTRO,test_transfer,80,1
+SPIDER,train,7000,140
+SPIDER,validation,1034,20
